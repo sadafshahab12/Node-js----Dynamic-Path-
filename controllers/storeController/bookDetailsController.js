@@ -7,8 +7,8 @@ exports.bookDetailsController = (req, res, next) => {
       console.log("Home Not Found!");
       res.redirect("/");
     } else {
-      console.log(book);
       res.render("store/bookDetails", {
+        book: book,
         title: "Books Details",
         currentPage: "Book Details",
       });
