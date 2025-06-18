@@ -1,0 +1,39 @@
+<%- include("partials/title")%>
+</head>
+<body>
+    <%- include("partials/header") %>
+ <section class="relative bg-pink-300 text-slate-800 overflow-hidden min-h-screen ">
+        <div class="max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center">
+            <!-- Text Content -->
+            <div class="w-full md:w-1/2 space-y-8">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+                    Discover Your Next Favorite Book 📚
+                </h1>
+                <p class="text-lg md:text-xl text-slate-800 ">
+                    Explore an endless collection of stories, knowledge, and adventures from the comfort of your screen.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="/add-book" class="bg-white text-pink-600 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-pink-50 transition duration-300">
+                        Add Your Book
+                    </a>
+                    <a href="/books" class="bg-pink-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-pink-700 transition duration-300">
+                        Browse Books
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image Content -->
+            <div class="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center">
+                <img src="https://png.pngtree.com/thumb_back/fh260/background/20210909/pngtree-bookstore-image_834987.jpg" alt="Books" class="w-full max-w-lg rounded-lg shadow-2xl">
+            </div>
+        </div>
+
+        <!-- Decorative SVG at Bottom -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 320" class="w-full h-24">
+                <path fill="#ffffff" fill-opacity="1" d="M0,224L48,202.7C96,181,192,139,288,122.7C384,107,480,117,576,144C672,171,768,213,864,197.3C960,181,1056,107,1152,90.7C1248,75,1344,117,1392,138.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+</body>
+</html>

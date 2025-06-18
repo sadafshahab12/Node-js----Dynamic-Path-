@@ -1,0 +1,37 @@
+<header class="flex justify-between items-center h-20 bg-pink-300 px-10 py-2">
+  <div class="logo">
+    <h1 class="text-3xl font-bold">BookStore</h1>
+  </div>
+  <nav class="space-x-6">
+    <a
+      href="/"
+      class="cursor-pointer <%= currentPage === 'Home' ? 'bg-pink-500 py-2 px-4 rounded-md text-white transition-all ease-in duration-300' : 'bg-pink-300' %>"
+      >Home</a
+    >
+    <a
+      href="/book-list"
+      class="cursor-pointer <%= currentPage === 'Book List' ? 'bg-pink-500 py-2 px-4 rounded-md text-white transition-all ease-in duration-300' : 'bg-pink-300' %>"
+      >Books</a
+    >
+    <a
+      href="/add-book"
+      class="cursor-pointer <%= currentPage === 'Add Book' ? 'bg-pink-500 py-2 px-4 rounded-md text-white transition-all ease-in duration-300' : 'bg-pink-300' %>"
+      >Add Books</a
+    >
+    <a
+      href="/my-orders"
+      class="cursor-pointer <%= currentPage === 'My Orders' ? 'bg-pink-500 py-2 px-4 rounded-md text-white transition-all ease-in duration-300' : 'bg-pink-300' %>"
+      >My Orders</a
+    >
+  </nav>
+  <div
+    class="cursor-pointer <%= currentPage === 'My Favourite' ? 'bg-pink-400 py-2 px-3 rounded-md text-white transition-all ease-in duration-300' : 'bg-pink-300' %>"
+  >
+    <a href="/my-favourite">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/142/142241.png"
+        alt="Favourites-icon"
+        class="w-6 h-6 cursor-pointer"
+    /></a>
+  </div>
+</header>
