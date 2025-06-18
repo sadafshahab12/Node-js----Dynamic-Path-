@@ -18,10 +18,10 @@ app.use(express.static(path.join(rootDir, "public")));
 app.use(express.urlencoded());
 app.use(storeRoutes.homeRouter);
 app.use(adminRoutes.addBookRoute);
-app.use(adminRoutes.bookListRouter);
 app.use(storeRoutes.bookListRouter);
 app.use(storeRoutes.myFavouriteRouter);
 app.use(storeRoutes.myOrderRouter);
+app.use(storeRoutes.getBookDetailsRouter);
 
 app.use(notFoundController);
 app.listen(PORT, () => {

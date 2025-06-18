@@ -8,6 +8,9 @@ const {
 const {
   myFavouriteController,
 } = require("../controllers/storeController/myFavouriteController");
+const {
+  bookDetailsController,
+} = require("../controllers/storeController/bookDetailsController");
 
 const { homeController } = require("../controllers/homeController");
 
@@ -17,6 +20,8 @@ homeRouter.get("/", homeController);
 
 const bookListRouter = express.Router();
 bookListRouter.get("/book-list", bookListController);
+const getBookDetailsRouter = express.Router();
+getBookDetailsRouter.get("/book-list/:bookId", bookDetailsController);
 
 const myFavouriteRouter = express.Router();
 myFavouriteRouter.get("/my-favourite", myFavouriteController);
@@ -29,4 +34,5 @@ module.exports = {
   bookListRouter,
   myFavouriteRouter,
   myOrderRouter,
+  getBookDetailsRouter,
 };

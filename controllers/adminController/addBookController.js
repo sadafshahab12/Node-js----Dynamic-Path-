@@ -9,5 +9,5 @@ exports.postAddBook = (req, res, next) => {
 
   const bookData = new AddNewBook(name, author, image, price);
   bookData.saveBookInFile();
-  res.render("admin/success", { title: "Success Message" });
+  res.render("admin/success", { title: "Success Message" ,  currentPage: "Add Book Successfully"  });
 };
