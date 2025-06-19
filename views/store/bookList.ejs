@@ -14,9 +14,8 @@
                         <p class="text-lg"><%= book.author %></p>
                         <p class="text-lg">$<%= book.price %></p>
                         <div class="flex items-center gap-3">
-
-                            <a href="/book-list/<%=book.id%>" class="text-lg bg-pink-500 text-white w-full py-2 px-4 cursor-pointer text-center">View Details</a>
-                            <button class="text-lg bg-pink-500 text-white w-full py-2 px-4" >Add To Cart</button>
+                            <a href="/book-list/<%=book.id%>" class="text-lg bg-pink-500 text-white w-full py-2 px-4 cursor-pointer text-center flex-1">View Details</a>
+                            <%- include("../partials/addToWishlist" ,  {book : book}) %>
                         </div>
                     </div>
                 </div>

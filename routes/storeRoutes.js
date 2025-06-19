@@ -1,4 +1,8 @@
 const express = require("express");
+const { homeController } = require("../controllers/homeController");
+const {
+  wishlistController,
+} = require("../controllers/storeController/wishlistController");
 const {
   bookListController,
 } = require("../controllers/storeController/bookListController");
@@ -6,13 +10,11 @@ const {
   myOrderController,
 } = require("../controllers/storeController/myOrderController");
 const {
-  myFavouriteController,
-} = require("../controllers/storeController/myFavouriteController");
-const {
   bookDetailsController,
 } = require("../controllers/storeController/bookDetailsController");
-
-const { homeController } = require("../controllers/homeController");
+const {
+  addToWishlistController,
+} = require("../controllers/storeController/addToWishlistController");
 
 const homeRouter = express.Router();
 
@@ -20,11 +22,14 @@ homeRouter.get("/", homeController);
 
 const bookListRouter = express.Router();
 bookListRouter.get("/book-list", bookListController);
+
 const getBookDetailsRouter = express.Router();
 getBookDetailsRouter.get("/book-list/:bookId", bookDetailsController);
 
-const myFavouriteRouter = express.Router();
-myFavouriteRouter.get("/my-favourite", myFavouriteController);
+const wishlistRouter = express.Router();
+wishlistRouter.get("/wishlist", wishlistController);
+
+wishlistRouter.post("/wishlist", addToWishlistController);
 
 const myOrderRouter = express.Router();
 myOrderRouter.get("/my-orders", myOrderController);
@@ -32,7 +37,7 @@ myOrderRouter.get("/my-orders", myOrderController);
 module.exports = {
   homeRouter,
   bookListRouter,
-  myFavouriteRouter,
+  wishlistRouter,
   myOrderRouter,
   getBookDetailsRouter,
 };

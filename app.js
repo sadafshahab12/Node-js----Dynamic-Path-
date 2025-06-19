@@ -19,9 +19,9 @@ app.use(express.urlencoded());
 app.use(storeRoutes.homeRouter);
 app.use(adminRoutes.addBookRoute);
 app.use(storeRoutes.bookListRouter);
-app.use(storeRoutes.myFavouriteRouter);
-app.use(storeRoutes.myOrderRouter);
 app.use(storeRoutes.getBookDetailsRouter);
+app.use(storeRoutes.wishlistRouter);
+app.use(storeRoutes.myOrderRouter);
 
 app.use(notFoundController);
 app.listen(PORT, () => {

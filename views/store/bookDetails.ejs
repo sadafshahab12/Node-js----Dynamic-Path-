@@ -8,12 +8,14 @@
         </div>
         <div class=" flex flex-col justify-center items-center py-6">
             <img src="<%=book.image%>" alt="<%= book.name %>" class=" max-w-xl w-full h-full object-cover rounded-md"/>
-                <div class="py-4 space-y-2  max-w-xl  w-full">
+                <div class="py-4 space-y-2  max-w-xl w-full">
                     <h1 class="text-xl font-bold"><%= book.name %></h1>
                     <p class="text-lg"><%= book.author %></p>
                     <p class="text-lg">$<%= book.price %></p>
                     <button class="text-lg bg-pink-500 text-white w-full py-2 px-4 cursor-pointer" >Add To Cart</button>
-                    <button class="text-lg bg-pink-500 text-white w-full py-2 px-4 cursor-pointer" >Add To Favourite</button>
+                    <div>
+                        <%- include("../partials/addToWishlist") %>
+                    </div>
                 </div>
             </div>
     </div>
